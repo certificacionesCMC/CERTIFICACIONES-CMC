@@ -1,0 +1,84 @@
+DROP DATABASE IF EXISTS cmc;
+CREATE DATABASE CMC CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE CMC;
+
+CREATE TABLE rep_legal (
+    rep_id INT PRIMARY KEY AUTO_INCREMENT,
+    rep_nombre VARCHAR(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+    rep_nombreusuario VARCHAR(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+    rep_direccion VARCHAR(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+    rep_telefono INT NOT NULL,
+    rep_contrasena VARCHAR(20) COLLATE utf8mb4_unicode_ci NOT NULL CHECK (rep_contrasena REGEXP '^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{20,}$')
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+CREATE TABLE categoria (
+    id_categoria INT PRIMARY KEY NOT NULL,
+    cat_descripcion VARCHAR(45) NOT NULL,
+    rep_legal_rep_id INT NOT NULL,
+    FOREIGN KEY (rep_legal_rep_id) REFERENCES rep_legal(rep_id)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE establecimiento (
+    id_establecimiento INT PRIMARY KEY NOT NULL,
+    correo_est VARCHAR(45) NOT NULL,
+    direccion_est VARCHAR(45) NOT NULL,
+    nombre_est VARCHAR(45) NOT NULL,  
+    rep_legal_rep_id INT NOT NULL,
+    FOREIGN KEY (rep_legal_rep_id) REFERENCES rep_legal(rep_id)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE orden_servicio (
+    id_orden_servicio INT PRIMARY KEY NOT NULL,
+    orden_serv_fecha DATE NOT NULL,
+    orden_serv_hora varchar (50) NOT NULL,
+    orden_serv_precaucion VARCHAR(45) NOT NULL,
+    rep_legal_rep_id INT NOT NULL,
+    FOREIGN KEY (rep_legal_rep_id) REFERENCES rep_legal(rep_id)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE tipo_servicio (
+    id_tipo_servicio INT PRIMARY KEY NOT NULL,
+    tipo_serv_suministro_emergencia VARCHAR(45),
+    tipo_serv_control_roedores VARCHAR(45),
+    tipo_serv_lavado_tanques VARCHAR(45),
+    tipo_serv_capacitacionSST VARCHAR(45),
+    tipo_serv_descripcion VARCHAR(45) NOT NULL, 
+    orden_servicio_id_orden_servicio INT NOT NULL,
+    FOREIGN KEY (orden_servicio_id_orden_servicio) REFERENCES orden_servicio(id_orden_servicio)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE detalle_servicio (
+    id_detalle_servicio INT PRIMARY KEY NOT NULL,
+    det_serv_precio INT NOT NULL,
+    det_serv_nombre_operario VARCHAR(45) NOT NULL,
+    det_serv_cantidad_producto VARCHAR(45) NOT NULL,
+    det_fin_servicio VARCHAR(45) NOT NULL
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE detalle_servicio_has_orden_servicio (
+    detalle_servicio_id_detalle_servicio INT NOT NULL,
+    orden_servicio_id_orden_servicio INT NOT NULL,
+    FOREIGN KEY (detalle_servicio_id_detalle_servicio) REFERENCES detalle_servicio(id_detalle_servicio),
+    FOREIGN KEY (orden_servicio_id_orden_servicio) REFERENCES orden_servicio(id_orden_servicio),
+    PRIMARY KEY (detalle_servicio_id_detalle_servicio, orden_servicio_id_orden_servicio)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE certificado (
+    id_certificado INT PRIMARY KEY NOT NULL,
+    fecha_certificado DATE NOT NULL,
+    estado_certificado varchar (50) NOT NULL, 
+    orden_servicio_id_orden_servicio INT NOT NULL,
+    FOREIGN KEY (orden_servicio_id_orden_servicio) REFERENCES orden_servicio(id_orden_servicio)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+CREATE TABLE ficha_tecnica (
+    fct_producto_aplicado VARCHAR(45) PRIMARY KEY NOT NULL,
+    ftc_dosis VARCHAR(45) NOT NULL,
+    ftc_ingrediente_activo VARCHAR(45) NOT NULL,
+    certificado_id_certificado INT NOT NULL,
+    detalle_servicio_id_detalle_servicio INT NOT NULL,
+    FOREIGN KEY (certificado_id_certificado) REFERENCES certificado(id_certificado),
+    FOREIGN KEY (detalle_servicio_id_detalle_servicio) REFERENCES detalle_servicio(id_detalle_servicio)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
