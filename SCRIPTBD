@@ -8,7 +8,7 @@ CREATE TABLE rep_legal (
     rep_nombreusuario VARCHAR(45) COLLATE utf8mb4_unicode_ci NOT NULL,
     rep_direccion VARCHAR(45) COLLATE utf8mb4_unicode_ci NOT NULL,
     rep_telefono INT NOT NULL,
-    rep_contrasena VARCHAR(20) COLLATE utf8mb4_unicode_ci NOT NULL CHECK (rep_contrasena REGEXP '^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{20,}$')
+    rep_contrasena VARCHAR(20) COLLATE utf8mb4_unicode_ci NOT NULL
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 
