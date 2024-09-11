@@ -1,0 +1,154 @@
+SELECT * FROM cmc.rep_legal;
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1025648961, 'andres', 'pepipto10', 'BOSA', 2657890, 'ABcdf57');
+INSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1451184584, 'andrea', 'pepito11', 'SOACHA', 6548547,'Ab0921');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1364488763, 'ivan', 'pepito12', 'USAQUEN', 4875654, 'CrO121');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1448454584, 'julian', 'pepito13', 'BOSA',  4545659,'QwE456');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1405545763, 'juliana', 'pepito14', 'CHAPINERO', 1545654,'rTy987');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1102210145, 'camila', 'pepito15', 'TEUSAQUILLO', 3211054,'NJA159');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1001212134, 'isaura', 'pepito16', 'SUBA', 2145454,'MNv981');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1136669095, 'daniela', 'pepito17', 'C/BOLIVAR', 3214512,'ZZAX1433');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1925518350, 'nelson', 'pepito18', 'BOSA', 9009541,'QvGt564');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1136669081, 'andy', 'pepito19', 'MONTEVIDEO', 6985472,'Messi321');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1026599813, 'andrey', 'pepito20', 'C/BOLIVAR', 5545488,'Password321');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1057478519, 'marcos', 'pepito21', 'C/BOLIVAR', 2544655,'Password123');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1000454004, 'luis', 'pepito22', 'ALTAMIRA', 2151156,'Contraseña321');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (1558448461, 'damaris', 'pepito23', 'LAS NIEVES', 8854555,'Contraseña123');
+iNSERT INTO cmc.rep_legal (rep_id, rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena) value (102475800, 'laura', 'pepito24', 'SOACHA', 2013240,'kLj89087');
+
+
+
+SELECT * FROM cmc.categoria;
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 1, 'SALUBRIDAD', 1025648961);
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 2, 'SALUBRIDAD', 1451184584 );
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 3, 'SALUBRIDAD', 1364488763 );
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 4, 'SALUBRIDAD', 1448454584 );
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 5, 'SALUBRIDAD', 1405545763 );
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 6, 'SALUBRIDAD', 1102210145);
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 7, 'SALUBRIDAD', 1001212134);
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 8, 'SALUBRIDAD', 1136669095 );
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 9, 'SALUBRIDAD', 1925518350 );
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 10,'SALUBRIDAD', 1136669081);
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 11,'SALUBRIDAD', 1026599813);
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 12,'SALUBRIDAD', 1057478519);
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 13,'SALUBRIDAD', 1000454004);
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 14,'SALUBRIDAD', 1558448461);
+insert into cmc.categoria (id_categoria, cat_descripcion,rep_legal_rep_id) value ( 15,'SALUBRIDAD', 102475800);
+
+
+
+SELECT * FROM cmc.establecimiento;
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (1,'EST1@GMAIL.COM','BOGOTA','LOCAL1',1025648961);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (2,'EST2@GMAIL.COM','BOGOTA','LOCAL2',1451184584);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (3,'EST3@GMAIL.COM','BOGOTA','LOCAL3',1364488763);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (4,'EST4@GMAIL.COM','BOGOTA','LOCAL4',1448454584);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (5,'EST5@GMAIL.COM','BOGOTA','LOCAL5',1405545763);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (6,'EST6@GMAIL.COM','BOGOTA','LOCAL6',1102210145);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (7,'EST7@GMAIL.COM','BOGOTA','LOCAL7',1001212134);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (8,'EST8@GMAIL.COM','BOGOTA','LOCAL8',1136669095);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (9,'EST9@GMAIL.COM','BOGOTA','LOCAL9',1925518350);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (10,'EST10@GMAIL.COM','BOGOTA','LOCAL10',1136669081);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (11,'EST11@GMAIL.COM','BOGOTA','LOCAL11',1136669081);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (12,'ES12@GMAIL.COM','BOGOTA','LOCAL12',1057478519);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (13,'ES13@GMAIL.COM','BOGOTA','LOCAL13',1000454004);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (14,'ES14@GMAIL.COM','BOGOTA','LOCAL14',1558448461);
+insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nombre_est,rep_legal_rep_id) value (15,'ES15@GMAIL.COM','BOGOTA','LOCAL15',102475800);
+
+
+
+SELECT * FROM cmc.orden_servicio;
+INSERT INTO orden_servicio (id_orden_servicio, orden_serv_fecha, orden_serv_hora, orden_serv_precaucion, rep_legal_rep_id) VALUES
+(1, '2024-09-01', 'Activo', 'Ninguna', 1025648961),
+(2, '2024-09-02', 'No activo', 'Alerta de seguridad', 1451184584),
+(3, '2024-09-03', 'Activo', 'Ninguna', 1364488763),
+(4, '2024-09-04', 'No activo', 'Precaución con químicos', 1448454584),
+(5, '2024-09-05', 'Activo', 'Ninguna', 1405545763),
+(6, '2024-09-06', 'No activo', 'Revisión especial', 1102210145),
+(7, '2024-09-07', 'Activo', 'Ninguna', 1001212134),
+(8, '2024-09-08', 'No activo', 'Chequeo rutinario', 1136669095),
+(9, '2024-09-09', 'Activo', 'Ninguna', 1925518350),
+(10, '2024-09-10', 'No activo', 'Atención urgente', 1136669081),
+(11, '2024-09-11', 'Activo', 'Ninguna', 1136669081),
+(12, '2024-09-12', 'No activo', 'Revisión periódica', 1057478519),
+(13, '2024-09-13', 'Activo', 'Ninguna', 1000454004),
+(14, '2024-09-14', 'No activo', 'Revisión de seguridad', 1558448461),
+(15, '2024-09-15', 'Activo', 'Ninguna', 102475800)
+
+
+
+SELECT * FROM cmc.orden_servicio;
+INSERT INTO orden_servicio (id_orden_servicio, orden_serv_fecha, orden_serv_hora, orden_serv_precaucion, rep_legal_rep_id) VALUES
+(1, '2024-09-01', 'Activo', 'Ninguna', 1025648961),
+(2, '2024-09-02', 'No activo', 'Alerta de seguridad', 1451184584),
+(3, '2024-09-03', 'Activo', 'Ninguna', 1364488763),
+(4, '2024-09-04', 'No activo', 'Precaución con químicos', 1448454584),
+(5, '2024-09-05', 'Activo', 'Ninguna', 1405545763),
+(6, '2024-09-06', 'No activo', 'Revisión especial', 1102210145),
+(7, '2024-09-07', 'Activo', 'Ninguna', 1001212134),
+(8, '2024-09-08', 'No activo', 'Chequeo rutinario', 1136669095),
+(9, '2024-09-09', 'Activo', 'Ninguna', 1925518350),
+(10, '2024-09-10', 'No activo', 'Atención urgente', 1136669081),
+(11, '2024-09-11', 'Activo', 'Ninguna', 1136669081),
+(12, '2024-09-12', 'No activo', 'Revisión periódica', 1057478519),
+(13, '2024-09-13', 'Activo', 'Ninguna', 1000454004),
+(14, '2024-09-14', 'No activo', 'Revisión de seguridad', 1558448461),
+(15, '2024-09-15', 'Activo', 'Ninguna', 102475800)
+
+
+
+SELECT * FROM cmc.tipo_servicio;
+INSERT INTO tipo_servicio (id_tipo_servicio, tipo_serv_suministro_emergencia, tipo_serv_control_roedores, tipo_serv_lavado_tanques, tipo_serv_capacitacionSST, tipo_serv_descripcion, orden_servicio_id_orden_servicio) VALUES
+(1, 'Sí', 'No', 'Sí', 'No', 'Servicio completo de emergencia con suministro de productos', 1),
+(2, 'No', 'Sí', 'No', 'Sí', 'Control de roedores con productos especializados', 2),
+(3, 'Sí', 'No', 'Sí', 'No', 'Lavado de tanques con químicos aprobados', 3),
+(4, 'No', 'Sí', 'No', 'Sí', 'Capacitación SST para personal', 4),
+(5, 'Sí', 'No', 'Sí', 'Sí', 'Suministro de emergencia y capacitación SST', 5),
+(6, 'No', 'Sí', 'No', 'No', 'Control de roedores y revisión de seguridad', 6),
+(7, 'Sí', 'No', 'Sí', 'Sí', 'Lavado de tanques y suministro de emergencia', 7),
+(8, 'No', 'Sí', 'No', 'Sí', 'Control de roedores con seguimiento', 8),
+(9, 'Sí', 'No', 'Sí', 'No', 'Servicio de emergencia y capacitación SST', 9),
+(10, 'No', 'Sí', 'No', 'Sí', 'Capacitación SST y control de roedores', 10),
+(11, 'Sí', 'No', 'Sí', 'No', 'Suministro de emergencia y lavado de tanques', 11),
+(12, 'No', 'Sí', 'No', 'Sí', 'Control de roedores y capacitación SST', 12),
+(13, 'Sí', 'No', 'Sí', 'No', 'Lavado de tanques y capacitación SST', 13),
+(14, 'No', 'Sí', 'No', 'Sí', 'Control de roedores y servicio de emergencia', 14),
+(15, 'Sí', 'No', 'Sí', 'No', 'Suministro de emergencia y capacitación SST', 15);
+
+
+
+SELECT * FROM cmc.detalle_servicio;
+INSERT INTO detalle_servicio (id_detalle_servicio, det_serv_precio, det_serv_nombre_operario, det_serv_cantidad_producto, det_fin_servicio) VALUES
+(1, 1500, 'Juan Pérez', '100 unidades', '2024-09-01'),
+(2, 2000, 'Ana Gómez', '200 unidades', '2024-09-02'),
+(3, 2500, 'Carlos Ruiz', '150 unidades', '2024-09-03'),
+(4, 1800, 'Laura Sánchez', '120 unidades', '2024-09-04'),
+(5, 2200, 'Pedro Martínez', '180 unidades', '2024-09-05'),
+(6, 2700, 'Marta López', '160 unidades', '2024-09-06'),
+(7, 3000, 'Luis Fernández', '200 unidades', '2024-09-07'),
+(8, 3200, 'Elena Torres', '190 unidades', '2024-09-08'),
+(9, 3500, 'Javier Morales', '210 unidades', '2024-09-09'),
+(10, 3800, 'Sofia García', '220 unidades', '2024-09-10'),
+(11, 4000, 'Antonio Ramírez', '230 unidades', '2024-09-11'),
+(12, 4200, 'Beatriz Álvarez', '240 unidades', '2024-09-12'),
+(13, 4400, 'Ricardo Fernández', '250 unidades', '2024-09-13'),
+(14, 4600, 'María López', '260 unidades', '2024-09-14'),
+(15, 4800, 'Felipe Díaz', '270 unidades', '2024-09-15');
+
+
+
+SELECT * FROM cmc.certificado;
+INSERT INTO certificado (id_certificado, fecha_certificado, estado_certificado, orden_servicio_id_orden_servicio) VALUES
+(16, '2024-01-15', 'Activo', 1),
+(17, '2024-02-20', 'No activo', 2),
+(18, '2024-03-25', 'Activo', 3),
+(19, '2024-04-30', 'No activo', 4),
+(20, '2024-05-05', 'Activo', 5),
+(21, '2024-06-10', 'No activo', 6),
+(22, '2024-07-15', 'Activo', 7),
+(23, '2024-08-20', 'No activo', 8),
+(24, '2024-09-25', 'Activo', 9),
+(25, '2024-10-30', 'No activo', 10),
+(26, '2024-11-05', 'Activo', 11),
+(27, '2024-12-10', 'No activo', 12),
+(28, '2024-01-12', 'Activo', 13),
+(29, '2024-02-15', 'No activo', 14),
+(30, '2024-03-18', 'Activo', 15);
