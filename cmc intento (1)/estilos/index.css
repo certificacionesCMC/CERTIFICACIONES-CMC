@@ -1,0 +1,42 @@
+header{
+    background-color: rgb(246, 246, 246);
+    padding: 25px 0;
+}
+
+
+
+
+
+
+
+
+
+
+h2 {
+    margin-right: 150px;
+    text-align: right;
+    text-decoration: underline;
+    text-decoration-color: red;
+
+}
+
+body {
+    margin: 0;
+}
+
+h3{
+    color: aliceblue;
+    margin-right: 150px;
+    text-align: right;
+}
+footer{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background-color: #000000;
+    
+}
+h4 {
+    color: aliceblue;
+    text-align: left;
+}
