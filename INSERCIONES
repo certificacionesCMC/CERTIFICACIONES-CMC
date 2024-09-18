@@ -55,23 +55,6 @@ insert into cmc.establecimiento (id_establecimiento,correo_est,direccion_est,nom
 
 
 
-SELECT * FROM cmc.orden_servicio;
-INSERT INTO orden_servicio (id_orden_servicio, orden_serv_fecha, orden_serv_hora, orden_serv_precaucion, rep_legal_rep_id) VALUES
-(1, '2024-09-01', 'Activo', 'Ninguna', 1025648961),
-(2, '2024-09-02', 'No activo', 'Alerta de seguridad', 1451184584),
-(3, '2024-09-03', 'Activo', 'Ninguna', 1364488763),
-(4, '2024-09-04', 'No activo', 'Precaución con químicos', 1448454584),
-(5, '2024-09-05', 'Activo', 'Ninguna', 1405545763),
-(6, '2024-09-06', 'No activo', 'Revisión especial', 1102210145),
-(7, '2024-09-07', 'Activo', 'Ninguna', 1001212134),
-(8, '2024-09-08', 'No activo', 'Chequeo rutinario', 1136669095),
-(9, '2024-09-09', 'Activo', 'Ninguna', 1925518350),
-(10, '2024-09-10', 'No activo', 'Atención urgente', 1136669081),
-(11, '2024-09-11', 'Activo', 'Ninguna', 1136669081),
-(12, '2024-09-12', 'No activo', 'Revisión periódica', 1057478519),
-(13, '2024-09-13', 'Activo', 'Ninguna', 1000454004),
-(14, '2024-09-14', 'No activo', 'Revisión de seguridad', 1558448461),
-(15, '2024-09-15', 'Activo', 'Ninguna', 102475800)
 
 
 
