@@ -2,13 +2,20 @@ DROP DATABASE IF EXISTS cmc;
 CREATE DATABASE CMC CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE CMC;
 
+CREATE TABLE rol (
+id_rol INT PRIMARY KEY AUTO_INCREMENT,
+nombre_rol VARCHAR(45) NOT NULL
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 CREATE TABLE rep_legal (
     rep_id INT PRIMARY KEY AUTO_INCREMENT,
     rep_nombre VARCHAR(45) COLLATE utf8mb4_unicode_ci NOT NULL,
     rep_nombreusuario VARCHAR(45) COLLATE utf8mb4_unicode_ci NOT NULL,
     rep_direccion VARCHAR(45) COLLATE utf8mb4_unicode_ci NOT NULL,
     rep_telefono INT NOT NULL,
-    rep_contrasena VARCHAR(20) COLLATE utf8mb4_unicode_ci NOT NULL
+    rep_contrasena VARCHAR(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+    rol_id_rol INT NOT NULL,
+    FOREIGN KEY (rol_id_rol) REFERENCES rol(id_rol)
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 
@@ -82,3 +89,10 @@ CREATE TABLE ficha_tecnica (
     FOREIGN KEY (certificado_id_certificado) REFERENCES certificado(id_certificado),
     FOREIGN KEY (detalle_servicio_id_detalle_servicio) REFERENCES detalle_servicio(id_detalle_servicio)
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+insert into rol (id_rol, nombre_rol) values (1, 'administrador');
+insert into rol (id_rol, nombre_rol) values (2, 'usuario');
+insert into rep_legal (rep_nombre, rep_nombreusuario, rep_direccion, rep_telefono, rep_contrasena, rol_id_rol) values ('Julian','Juliannt','Bosa',3208905768, '$2b$12$FbSI1U1wXebh5ovXJg8QR.w2DUDmWuX2dHegPExfrhqsxxGNQdG4K',1);
+
+SELECT * FROM rep_legal WHERE rep_nombreusuario=Juliannt and rol_id_rol=1
