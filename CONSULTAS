@@ -1,1 +1,22 @@
+/*lista roles*/
 
+SELECT * FROM rol;
+
+/* ususario y su rol*/
+
+SELECT rep_nombre FROM rep_legal WHERE rol_id_rol = 1;
+
+/*Cuente el número de pedidos por categoría*/
+
+SELECT cat_descripcion, COUNT(orden_servicio.categoria_id) AS order_count
+FROM categoria
+JOIN orden_servicio ON categoria.id_categoria = orden_servicio.categoria_id
+GROUP BY cat_descripcion;
+
+SELECT * FROM orden_servicio WHERE id_orden_servicio = 123;
+
+/*inicio sesion*/
+SELECT * FROM rep_legal
+WHERE rep_nombreusuario = 'rodri24'
+AND rep_contrasena = PASSWORD('$2b$12$BC9kM4LyElZlBYGMPUbeAOFj81sQDw.kUbe6lN2P3xAk4gnyPoAjS')
+AND rol_id_rol = '2';
